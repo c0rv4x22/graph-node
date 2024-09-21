@@ -29,7 +29,6 @@ use graph::{
 };
 use std::sync::{Arc, RwLock};
 use std::{collections::HashMap, time::Instant};
-
 use self::instance::SubgraphInstance;
 
 use super::Decoder;
