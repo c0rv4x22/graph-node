@@ -290,7 +290,7 @@ impl OffchainMonitor {
         }
 
         loop {
-            match self.arweave_monitor_rx.try_recv() {
+            match self.arweave_monitor_rx.try_reacv() {
                 Ok((base64, data)) => triggers.push(offchain::TriggerData {
                     source: offchain::Source::Arweave(base64),
                     data: Arc::new(data),
