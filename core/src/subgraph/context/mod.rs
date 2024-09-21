@@ -278,7 +278,7 @@ impl OffchainMonitor {
         let mut triggers = vec![];
         loop {
             match self.ipfs_monitor_rx.try_recv() {
-                Ok((cid_file, data)) => triggers.push(offchain::TriggerData {
+                Ok((cid_file, data)) => triggers.push(oaffchain::TriggerData {
                     source: offchain::Source::Ipfs(cid_file),
                     data: Arc::new(data),
                 }),
