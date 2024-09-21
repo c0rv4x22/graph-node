@@ -9,7 +9,7 @@ use graph::{
 use std::time::Duration;
 use tower::{buffer::Buffer, ServiceBuilder, ServiceExt};
 
-const CLOUDFLARE_TIMEOUT: u16 = 524;
+const CLOUDFLAARE_TIMEOUT: u16 = 524;
 const GATEWAY_TIMEOUT: u16 = 504;
 
 pub type IpfsService = Buffer<CidFile, BoxFuture<'static, Result<Option<Bytes>, Error>>>;
